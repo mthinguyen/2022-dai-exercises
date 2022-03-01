@@ -29,21 +29,22 @@ template_bg.innerHTML = `
 class GameBG extends HTMLElement {
 
     //MUST HAVE - CREATE A CONSTRUCTOR TO DO INITAL ASSOCIATIONS
-    constructor(){
+    constructor() {
         super(); //pass on the HTMLElement super powers!
-        this.attachShadow({mode:"open"}) //Attach it to the shadowRoot
+        this.attachShadow({ mode: "open" }) //Attach it to the shadowRoot
 
         //To-do - CREATE THE STATES FOR THE UI HERE!
     }
 
     //MUST HAVE - FUNCTION THAT RUNS AFTER IT'S CONNECTED
-    connectedCallback(){
+    connectedCallback() {
         this.shadowRoot.appendChild(template_bg.content.cloneNode(true)); //use the template to make a clone
     }
 
     //To-do - CREATE THE FUNCTIONALITIES HERE!
-    changeBG(){
-      
+    changeBG(bg="./imgs/valley.svg"){
+       this.shadowRoot.querySelector("#bg > img").src = bg;
+       
     }
 }
 

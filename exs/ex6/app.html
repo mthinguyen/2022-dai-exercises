@@ -4,10 +4,32 @@
     <title>Understanding Data Flow</title>
     <script src="comps/gamemenu.js"></script>
     <script src="comps/gamebg.js"></script>
+    <script src="comps/enviro.js"></script>
+    <link rel="stylesheet" href="comps/style.css">
   </head>
 
   <body>
-    <game-menu></game-menu>
-    <game-bg></game-bg>
+    <game-menu 
+    name="snow"
+    ></game-menu>
+    <game-menu 
+    name="desert"
+    ></game-menu>
+    <game-menu 
+    name="valley"
+    ></game-menu>
+    <game-menu 
+    name="forest"
+    ></game-menu>
+    
+    <game-enviro
+      id="enviro"
+    ></game-enviro>
+
+    <game-bg 
+    id="gamebg"
+    ></game-bg>
+
+    
   </body>
 </html>
